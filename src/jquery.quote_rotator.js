@@ -35,7 +35,11 @@
         var list_items = quote_list.find('li');
         var rotation_active = true;
         var rotation_speed = config.rotation_speed < 2000 ? 2000 : config.rotation_speed;
-        
+
+        if(list_items.length <= 1) {
+          return;
+        }
+
         var add_active_class = function() {
           var active_class_not_already_applied = quote_list.find('li.active').length === 0;
           if (config.randomize_first_quote) {
