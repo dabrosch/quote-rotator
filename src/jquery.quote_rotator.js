@@ -27,7 +27,7 @@
   $.fn.extend({
     quote_rotator: function(config) {
       
-      var config = $.extend({}, $.quote_rotator.defaults, config);
+      config = $.extend({}, $.quote_rotator.defaults, config);
       
       return this.each(function() {
         var rotation;
@@ -49,7 +49,7 @@
               quote_list.find('li:first').addClass('active');
           }
         }();
-        
+
         var get_next_quote = function(quote) {
           return quote.next('li').length ? quote.next('li') : quote_list.find('li:first');
         }
